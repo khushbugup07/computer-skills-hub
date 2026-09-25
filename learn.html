@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Computer Skills Hub | Learn</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <header class="navbar">
+
+        <div class="logo">
+            Computer Skills Hub
+        </div>
+
+        <nav>
+            <a href="index.html">Home</a> 
+            <a href="learn.html">Learn</a> 
+            <a href="practice.html">Practice</a>
+            <a href="quiz.html">Quiz</a>
+            
+            <a href="dashboard.html">Dashboard</a>
+        </nav>
+       
+
+    </header>
+
+
+    <section class="learning">
+
+        <h2>Learn Computer Skills</h2>
+
+        <p class="section-intro">
+            Start with the basics and explore how computers work.
+        </p>
+
+
+        <div class="learning-cards">
+
+            <div class="card" 
+
+    <h3>🖥️ What is a Computer?</h3>
+
+    <p>
+        Understand what a computer is, what it does,
+        and how it helps us in everyday life.
+    </p>
+    <br>
+
+<a href="computer-basics.html"> 
+    Start Lesson →
+</a>
+
+</div>
+
+
+            <div class="card">
+                <h3>⌨️ Input Devices</h3>
+                <p>
+                    Learn about keyboards, mice and other devices
+                    used to give instructions to a computer.
+                </p>
+                <br>
+
+                <a href="input-devices.html">
+                    Start Lesson →
+                </a>
+            </div>
+
+
+            <div class="card">
+                <h3>🖥️ Output Devices</h3>
+                <p>
+                    Discover monitors, speakers, printers and
+                    other devices that show computer results.
+                </p>
+                <br>
+
+                <a href="output-devices.html">
+                    Start Lesson →
+                </a>
+            </div>
+
+
+            <div class="card">
+    <h3>⚙️ Hardware</h3>
+
+    <p>
+        Explore the physical parts of a computer
+        that we can see and touch.
+    </p>
+
+    <br>
+
+    <a href="computer-parts.html">
+        Start Hardware Lesson →
+    </a>
+</div>
+            
+
+
+            <div class="card">
+                <h3>💾 Software</h3>
+                <p>
+                    Learn what software is and how programs
+                    help us perform different tasks.
+                </p>
+                <br>
+
+                <a href="software-basics.html">
+                    Start Lesson →
+                </a>
+            </div>
+
+
+            <div class="card">
+                <h3>🌐 Internet Basics</h3>
+                <p>
+                    Understand the basic idea of the internet
+                    and how it can support learning.
+                </p>
+                <br>
+
+                <a href="internet-basics.html">
+                    Start Lesson →
+                </a>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <footer>
+
+        <p>
+            Computer Skills Hub | Basic Computer Skills for Rural School Students
+        </p>
+
+    </footer>
+    
+
+
+    <script src="js/script.js"></script>
+    <script>
+function showLearning(topic) {
+
+    if (topic === "computer") {
+
+        document.getElementById("learning-title").textContent =
+            "🖥️ What is a Computer?";
+
+        document.getElementById("learning-text").textContent =
+            "A computer is an electronic device that accepts data, processes it, stores it, and produces useful information. Computers are used for education, communication, work, entertainment, banking and many other activities.";
+
+        document.getElementById("learning-info").style.display = "block";
+    }
+}
+</script>
+</body>
+</html>

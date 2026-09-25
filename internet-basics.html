@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Computer Skills Hub | Internet Basics</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <header class="navbar">
+
+        <div class="logo">
+            Computer Skills Hub
+        </div>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="learn.html">Learn</a>
+            <a href="practice.html">Practice</a>
+            <a href="quiz.html">Quiz</a>
+            <a href="dashboard.html">Dashboard</a>
+        </nav>
+
+    </header>
+
+    <main class="learning">
+
+        <h2>🌐 Internet Basics</h2>
+
+        <p class="section-intro">
+            Learn how the internet helps us find information,
+            communicate and explore websites.
+        </p>
+
+        <div class="card">
+
+            <h3>What is the Internet?</h3>
+
+            <p>
+                The internet is a worldwide network that connects
+                computers and devices so people can share information
+                and communicate with each other.
+            </p>
+
+            <h3>Important Internet Terms</h3>
+
+            <ul>
+                <li><strong>🌐 Internet:</strong> A network connecting computers and devices around the world.</li>
+
+                <li><strong>🔎 Search Engine:</strong> A tool used to find information on the internet.</li>
+
+                <li><strong>🌍 Website:</strong> A collection of web pages available on the internet.</li>
+
+                <li><strong>🧭 Web Browser:</strong> A program used to open and explore websites.</li>
+            </ul>
+
+        </div>
+
+        <div class="card">
+
+            <h3>🛡️ Safe Internet Use</h3>
+
+            <p>
+                We should use the internet carefully and protect
+                our personal information.
+            </p>
+
+            <ul>
+                <li>Do not share passwords with strangers.</li>
+                <li>Be careful when clicking unknown links.</li>
+                <li>Do not share personal information on unknown websites.</li>
+                <li>Ask a trusted adult if something online feels unsafe.</li>
+            </ul>
+
+       <div class="card">
+
+    <h3>🎯 What Would You Do?</h3>
+
+    <p>
+        You visit a website and it asks for your personal
+        information. What should you do?
+    </p>
+
+    <button onclick="checkInternetAnswer('share')">
+        📝 Share the information
+    </button>
+
+    <button onclick="checkInternetAnswer('leave')">
+        🛡️ Avoid sharing and leave the website
+    </button>
+
+    <p id="internet-result"></p>
+
+</div>
+</main>
+
+<footer>
+
+    <p>
+        Computer Skills Hub | Basic Computer Skills for Rural School Students
+    </p>
+
+</footer>
+
+<script>
+
+    function checkInternetAnswer(answer) {
+
+        const result =
+            document.getElementById("internet-result");
+
+        if (answer === "leave") {
+
+            result.textContent =
+                "✅ Good choice! Avoid sharing personal information on unknown websites.";
+
+        } else {
+
+            result.textContent =
+                "❌ Be careful! Personal information should not be shared with unknown websites.";
+
+        }
+    }
+
+</script>
+
+</body>
+
+</html>
+
+            

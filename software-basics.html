@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Computer Skills Hub | Software Basics</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <header class="navbar">
+
+        <div class="logo">
+            Computer Skills Hub
+        </div>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="learn.html">Learn</a>
+            <a href="practice.html">Practice</a>
+            <a href="quiz.html">Quiz</a>
+            <a href="dashboard.html">Dashboard</a>
+        </nav>
+
+    </header>
+
+    <main class="learning">
+
+        <h2>💾 Software Basics</h2>
+
+        <p class="section-intro">
+            Learn how programs help a computer perform different tasks.
+        </p>
+
+        <div class="card">
+
+            <h3>What is Software?</h3>
+
+            <p>
+                Software is a set of instructions or programs that
+                tells a computer what to do.
+            </p>
+
+            <h3>Types of Software</h3>
+
+            <ul>
+                <li><strong>⚙️ System Software:</strong> Helps operate and manage the computer.</li>
+                <li><strong>📱 Application Software:</strong> Helps users perform specific tasks.</li>
+            </ul>
+
+            <h3>Examples</h3>
+
+            <p>
+                Web browsers, word processors, media players and
+                operating systems are examples of software.
+            </p>
+
+        </div>
+
+        <div class="card">
+
+            <h3>🎯 Classify It</h3>
+
+            <p>
+                Which one is an example of application software?
+            </p>
+
+            <button onclick="checkSoftwareAnswer('word')">
+                📝 Word Processor
+            </button>
+
+            <button onclick="checkSoftwareAnswer('keyboard')">
+                ⌨️ Keyboard
+            </button>
+
+            <p id="software-result"></p>
+
+        </div>
+
+        <div class="card" style="text-align: center;">
+
+            <a href="computer-parts.html">← Previous Lesson</a>
+
+            &nbsp;&nbsp;&nbsp;&nbsp;
+
+            <a href="learn.html">Back to Lessons →</a>
+
+        </div>
+
+    </main>
+
+    <footer>
+
+        <p>
+            Computer Skills Hub | Basic Computer Skills for Rural School Students
+        </p>
+
+    </footer>
+
+    <script>
+
+        function checkSoftwareAnswer(answer) {
+
+            const result =
+                document.getElementById("software-result");
+
+            if (answer === "word") {
+
+                result.textContent =
+                    "✅ Correct! A word processor is application software used to create and edit documents.";
+
+            } else {
+
+                result.textContent =
+                    "❌ Try again. A keyboard is a hardware input device.";
+
+            }
+        }
+
+    </script>
+
+</body>
+
+</html>

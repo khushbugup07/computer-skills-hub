@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Computer Skills Hub | Output Devices</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <header class="navbar">
+
+        <div class="logo">
+            Computer Skills Hub
+        </div>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="learn.html">Learn</a>
+            <a href="practice.html">Practice</a>
+            <a href="quiz.html">Quiz</a>
+            <a href="dashboard.html">Dashboard</a>
+        </nav>
+
+    </header>
+
+    <main class="learning">
+
+        <h2>🖨️ Output Devices</h2>
+
+        <p class="section-intro">
+            Learn how a computer gives information back to us.
+        </p>
+
+        <div class="card">
+
+            <h3>What is an Output Device?</h3>
+
+            <p>
+                An output device is a hardware device that presents
+                information or results from a computer to the user.
+            </p>
+
+            <h3>Common Output Devices</h3>
+
+            <ul>
+                <li><strong>🖥️ Monitor:</strong> Displays text, images and videos.</li>
+                <li><strong>🔊 Speakers:</strong> Produce sound from the computer.</li>
+                <li><strong>🖨️ Printer:</strong> Produces a physical copy of information.</li>
+            </ul>
+
+        </div>
+
+        <div class="card">
+
+            <h3>🎯 Match the Device</h3>
+
+            <p>
+                Which device would you use to hear sound from a computer?
+            </p>
+
+            <button onclick="checkOutputAnswer('speaker')">
+                🔊 Speakers
+            </button>
+
+            <button onclick="checkOutputAnswer('keyboard')">
+                ⌨️ Keyboard
+            </button>
+
+            <p id="output-device-result"></p>
+
+        </div>
+
+        <div class="card" style="text-align: center;">
+
+            <a href="input-devices.html">← Previous Lesson</a>
+
+            &nbsp;&nbsp;&nbsp;&nbsp;
+
+            <a href="computer-parts.html">Next Lesson →</a>
+
+        </div>
+
+    </main>
+
+    <footer>
+
+        <p>
+            Computer Skills Hub | Basic Computer Skills for Rural School Students
+        </p>
+
+    </footer>
+
+    <script>
+
+        function checkOutputAnswer(answer) {
+
+            const result =
+                document.getElementById("output-device-result");
+
+            if (answer === "speaker") {
+
+                result.textContent =
+                    "✅ Correct! Speakers produce sound from a computer.";
+
+            } else {
+
+                result.textContent =
+                    "❌ Try again. A keyboard is an input device.";
+
+            }
+        }
+
+    </script>
+
+</body>
+
+</html>

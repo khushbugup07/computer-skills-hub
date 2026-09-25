@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Computer Skills Hub | Practice</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <header class="navbar">
+
+        <div class="logo">
+            Computer Skills Hub
+        </div>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="learn.html">Learn</a>
+            <a href="practice.html">Practice</a> 
+            <a href="quiz.html">Quiz</a>
+            
+            <a href="dashboard.html">Dashboard</a>
+        </nav>
+
+    </header>
+
+
+    <section class="learning">
+
+    <h2>Practice Zone 🧩</h2>
+
+    <p class="section-intro">
+        Practice your basic computer skills by answering the questions below.
+    </p>
+
+
+    <!-- Question 1 -->
+
+    <div class="card practice-card">
+
+        <h3>Question 1</h3>
+
+        <p>
+            Which device is mainly used to type letters and numbers?
+        </p>
+
+        <div class="practice-options">
+            <button
+            onclick="checkPractice(this, false)">
+                
+                🖱️ Mouse
+            </button>
+
+            <button onclick="checkPractice(this, true)">
+                ⌨️ Keyboard
+            </button>
+
+            <button onclick="checkPractice(this, false)">
+                🖥️ Monitor
+            </button>
+
+            <button onclick="checkPractice(this, false)">
+                🔊 Speaker
+            </button>
+
+        </div>
+
+        <p class="practice-result"></p>
+
+    </div>
+
+
+    <!-- Question 2 -->
+
+    <div class="card practice-card">
+
+        <h3>Question 2</h3>
+
+        <p>
+            Which device displays pictures and information from a computer?
+        </p>
+
+        <div class="practice-options">
+
+            <button onclick="checkPractice(this, false)">
+                ⌨️ Keyboard
+            </button>
+
+            <button onclick="checkPractice(this, true)">
+                🖥️ Monitor
+            </button>
+
+            <button onclick="checkPractice(this, false)">
+                🖱️ Mouse
+            </button>
+
+            <button onclick="checkPractice(this, false)">
+                🖨️ Printer
+            </button>
+
+        </div>
+
+        <p class="practice-result"></p>
+
+    </div>
+
+
+    <!-- Question 3 -->
+
+    <div class="card practice-card">
+
+        <h3>Question 3</h3>
+
+        <p>
+            Which of these is an input device?
+        </p>
+
+        <div class="practice-options">
+
+            <button onclick="checkPractice(this, true)">
+                🖱️ Mouse
+            </button>
+
+            <button onclick="checkPractice(this, false)">
+                🖥️ Monitor
+            </button>
+
+            <button onclick="checkPractice(this, false)">
+                🔊 Speaker
+            </button>
+
+            <button onclick="checkPractice(this, false)">
+                🖨️ Printer
+            </button>
+
+        </div>
+
+        <p class="practice-result"></p>
+
+    </div>
+
+
+    <!-- Question 4 -->
+
+    <div class="card practice-card">
+
+        <h3>Question 4</h3>
+
+        <p>
+            What is a folder mainly used for?
+        </p>
+
+        <div class="practice-options">
+
+            <button onclick="checkPractice(this, false)">
+                To play music
+            </button>
+
+            <button onclick="checkPractice(this, true)">
+                To organize files
+            </button>
+
+            <button onclick="checkPractice(this, false)">
+                To type text
+            </button>
+
+            <button onclick="checkPractice(this, false)">
+                To print pictures
+            </button>
+
+        </div>
+
+        <p class="practice-result"></p>
+
+    </div>
+
+
+    <!-- Question 5 -->
+
+    <div class="card practice-card">
+
+        <h3>Question 5</h3>
+
+        <p>
+            Which device is used to produce a physical copy of a document?
+        </p>
+
+        <div class="practice-options">
+
+            <button onclick="checkPractice(this, false)">
+                🖱️ Mouse
+            </button>
+
+            <button onclick="checkPractice(this, false)">
+                ⌨️ Keyboard
+            </button>
+
+            <button onclick="checkPractice(this, true)">
+                🖨️ Printer
+            </button>
+
+            <button onclick="checkPractice(this, false)">
+                🖥️ Monitor
+            </button>
+
+        </div>
+
+        <p class="practice-result"></p>
+
+    </div>
+
+
+    <div class="practice-complete" style="display: none;">
+
+        <h3>🎉 Practice Complete!</h3>
+
+        <p>
+            Keep practicing to improve your computer skills.
+        </p>
+
+    </div>
+
+</section>
+
+
+    <footer>
+
+        <p>
+            Computer Skills Hub | Basic Computer Skills for Rural School Students
+        </p>
+
+    </footer>
+
+
+    <script src="js/script.js"></script>
+
+<script>
+
+let practiceScorePage = 0;
+let answeredQuestionsPage = 0;
+
+function checkPractice(button, isCorrect) {
+
+    const card = button.closest(".practice-card");
+    const result = card.querySelector(".practice-result");
+
+    if (card.dataset.answered === "true") {
+        return;
+    }
+
+    card.dataset.answered = "true";
+
+    answeredQuestionsPage++;
+
+    if (isCorrect) {
+        practiceScorePage++;
+        result.innerHTML = "✅ Correct! Well done!";
+    } else {
+        result.innerHTML = "❌ Not quite. Keep learning!";
+    }
+
+    if (answeredQuestionsPage === 5) {
+
+        const completeBox =
+            document.querySelector(".practice-complete");
+
+        completeBox.style.display = "block";
+
+        completeBox.innerHTML =
+            "<h3>🎉 Practice Complete!</h3>" +
+            "<p>Your score: <strong>" +
+            practiceScorePage +
+            " / 5</strong></p>" +
+            "<p>Keep practicing to improve your computer skills.</p>";
+    }
+}
+
+</script>
+
+</body>

@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Computer Skills Hub | Computer Parts</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <header class="navbar">
+
+        <div class="logo">
+            Computer Skills Hub
+        </div>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="learn.html">Learn</a>
+            <a href="practice.html">Practice</a>
+            <a href="quiz.html">Quiz</a>
+            
+            <a href="dashboard.html">Dashboard</a>
+        </nav>
+
+    </header>
+
+
+    <section class="learning">
+
+        <h2>Computer Parts Explorer</h2>
+        <div class="progress-section">
+
+    <p>📚 Learning Progress: <span id="progress-text">0%</span></p>
+
+    <div class="progress-bar">
+        <div id="progress-fill"></div>
+    </div>
+
+</div>
+
+        <p class="section-intro">
+            Click a computer part to discover what it does.
+        </p>
+
+
+        <div class="learning-cards">
+
+            <div class="card part-card"
+                onclick="showPartInfo('monitor')">
+
+                <h3>🖥️ Monitor</h3>
+
+                <p>
+                    Click to learn more
+                </p>
+
+            </div>
+
+
+            <div class="card part-card"
+                onclick="showPartInfo('keyboard')">
+
+                <h3>⌨️ Keyboard</h3>
+
+                <p>
+                    Click to learn more
+                </p>
+
+            </div>
+
+
+            <div class="card part-card"
+                onclick="showPartInfo('mouse')">
+
+                <h3>🖱️ Mouse</h3>
+
+                <p>
+                    Click to learn more
+                </p>
+
+            </div>
+
+
+            <div class="card part-card"
+                onclick="showPartInfo('cpu')">
+
+                <h3>⚙️ CPU</h3>
+
+                <p>
+                    Click to learn more
+                </p>
+
+            </div>
+
+
+            <div class="card part-card"
+                onclick="showPartInfo('speakers')">
+
+                <h3>🔊 Speakers</h3>
+
+                <p>
+                    Click to learn more
+                </p>
+
+            </div>
+
+
+            <div class="card part-card"
+                onclick="showPartInfo('printer')">
+
+                <h3>🖨️ Printer</h3>
+
+                <p>
+                    Click to learn more
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div id="part-info" class="card" style="display: none; margin-top: 30px;">
+
+    <h2 id="part-title"></h2>
+
+    <p id="part-description"></p>
+
+    <p id="part-type"></p>
+
+</div>
+
+<div id="quick-check" class="card" style="display: none; margin-top: 20px;">
+
+    <h3>🎯 Quick Check</h3>
+
+    <p id="question-text"></p>
+
+    <div id="answer-buttons"></div>
+
+    <p id="quiz-result"></p>
+
+</div>
+
+<div class="card learning-activity">
+
+    <h3>🧠 What I Learned</h3>
+
+    <p>Type the name of one computer part you learned about:</p>
+
+    <input
+        type="text"
+        id="learned-part"
+        placeholder="Example: Keyboard"
+    >
+
+    <button onclick="showLearningMessage()">
+        Submit
+    </button>
+
+    <p id="learning-message"></p>
+
+</div>
+<div class="back-button-container">
+    <a href="learn.html" class="back-button">← Back to Learn</a>
+</div>
+
+        </div>
+
+    </section>
+
+
+    <footer>
+
+        <p>
+            Computer Skills Hub | Basic Computer Skills for Rural School Students
+        </p>
+
+    </footer>
+
+
+    <script>
+    let completedParts = [];
+    function showPartInfo(part) {
+
+        const title = document.getElementById("part-title");
+        const description = document.getElementById("part-description");
+        const type = document.getElementById("part-type");
+        const infoBox = document.getElementById("part-info");
+
+        const quickCheck = document.getElementById("quick-check");
+        const questionText = document.getElementById("question-text");
+        const answerButtons = document.getElementById("answer-buttons");
+        const quizResult = document.getElementById("quiz-result");
+
+
+        if (part === "monitor") {
+
+            title.innerHTML = "🖥️ Monitor";
+
+            description.innerHTML =
+                "A monitor is the screen of a computer. It displays text, pictures, videos and other information.";
+
+            type.innerHTML =
+                "<strong>Type:</strong> Output Device";
+
+            questionText.innerHTML =
+                "Which type of device is a monitor?";
+
+            answerButtons.innerHTML =
+                '<button onclick="checkAnswer(\'Input Device\')">Input Device</button>' +
+                '<button onclick="checkAnswer(\'Output Device\')">Output Device</button>' +
+                '<button onclick="checkAnswer(\'Processing Device\')">Processing Device</button>';
+
+            quickCheck.dataset.answer = "Output Device";
+
+        }
+
+
+        else if (part === "keyboard") {
+
+            title.innerHTML = "⌨️ Keyboard";
+
+            description.innerHTML =
+                "A keyboard is an input device used to type letters, numbers, symbols and commands into a computer.";
+
+            type.innerHTML =
+                "<strong>Type:</strong> Input Device";
+
+            questionText.innerHTML =
+                "Which type of device is a keyboard?";
+
+            answerButtons.innerHTML =
+                '<button onclick="checkAnswer(\'Input Device\')">Input Device</button>' +
+                '<button onclick="checkAnswer(\'Output Device\')">Output Device</button>' +
+                '<button onclick="checkAnswer(\'Processing Device\')">Processing Device</button>';
+
+            quickCheck.dataset.answer = "Input Device";
+
+        }
+
+
+        else if (part === "mouse") {
+
+            title.innerHTML = "🖱️ Mouse";
+
+            description.innerHTML =
+                "A mouse is an input device used to move the pointer, select items, open files and interact with the computer.";
+
+            type.innerHTML =
+                "<strong>Type:</strong> Input Device";
+
+            questionText.innerHTML =
+                "Which type of device is a mouse?";
+
+            answerButtons.innerHTML =
+                '<button onclick="checkAnswer(\'Input Device\')">Input Device</button>' +
+                '<button onclick="checkAnswer(\'Output Device\')">Output Device</button>' +
+                '<button onclick="checkAnswer(\'Processing Device\')">Processing Device</button>';
+
+            quickCheck.dataset.answer = "Input Device";
+
+        }
+
+
+        else if (part === "cpu") {
+
+            title.innerHTML = "⚙️ CPU";
+
+            description.innerHTML =
+                "The CPU, or Central Processing Unit, processes instructions and performs calculations needed by the computer.";
+
+            type.innerHTML =
+                "<strong>Type:</strong> Processing Device";
+
+            questionText.innerHTML =
+                "Which type of device is a CPU?";
+
+            answerButtons.innerHTML =
+                '<button onclick="checkAnswer(\'Input Device\')">Input Device</button>' +
+                '<button onclick="checkAnswer(\'Output Device\')">Output Device</button>' +
+                '<button onclick="checkAnswer(\'Processing Device\')">Processing Device</button>';
+
+            quickCheck.dataset.answer = "Processing Device";
+
+        }
+
+
+        else if (part === "speakers") {
+
+            title.innerHTML = "🔊 Speakers";
+
+            description.innerHTML =
+                "Speakers are output devices that produce sound from a computer, such as music, videos and notifications.";
+
+            type.innerHTML =
+                "<strong>Type:</strong> Output Device";
+
+            questionText.innerHTML =
+                "Which type of device are speakers?";
+
+            answerButtons.innerHTML =
+                '<button onclick="checkAnswer(\'Input Device\')">Input Device</button>' +
+                '<button onclick="checkAnswer(\'Output Device\')">Output Device</button>' +
+                '<button onclick="checkAnswer(\'Processing Device\')">Processing Device</button>';
+
+            quickCheck.dataset.answer = "Output Device";
+
+        }
+
+
+        else if (part === "printer") {
+
+            title.innerHTML = "🖨️ Printer";
+
+            description.innerHTML =
+                "A printer is an output device that produces a physical copy of digital documents, pictures or other information.";
+
+            type.innerHTML =
+                "<strong>Type:</strong> Output Device";
+
+            questionText.innerHTML =
+                "Which type of device is a printer?";
+
+            answerButtons.innerHTML =
+                '<button onclick="checkAnswer(\'Input Device\')">Input Device</button>' +
+                '<button onclick="checkAnswer(\'Output Device\')">Output Device</button>' +
+                '<button onclick="checkAnswer(\'Processing Device\')">Processing Device</button>';
+
+            quickCheck.dataset.answer = "Output Device";
+
+        }
+
+
+        infoBox.style.display = "block";
+        if (!completedParts.includes(part)) {
+
+            completedParts.push(part);
+
+            const progress =
+                Math.round((completedParts.length / 6) * 100);
+
+            localStorage.setItem("learningProgress", progress);
+
+        document.getElementById("progress-fill").style.width =
+        progress + "%";
+
+        document.getElementById("progress-text").innerHTML =
+        progress + "%";
+        if (progress === 100) {
+
+        document.getElementById("progress-text").innerHTML =
+        "100% 🎉 Complete!";
+
+}
+}
+
+        quickCheck.style.display = "block";
+
+        quizResult.innerHTML = "";
+
+        infoBox.scrollIntoView({
+            behavior: "smooth",
+            block: "center"
+        });
+
+    }
+
+
+    function checkAnswer(answer) {
+
+        const quickCheck = document.getElementById("quick-check");
+        const quizResult = document.getElementById("quiz-result");
+
+        const correctAnswer = quickCheck.dataset.answer;
+
+
+        if (answer === correctAnswer) {
+
+            quizResult.innerHTML = "✅ Correct! Well done!";
+
+        } else {
+
+            quizResult.innerHTML =
+                "❌ Not quite. The correct answer is " + correctAnswer + ".";
+
+        }
+
+    }
+    function showLearningMessage() {
+
+    const input = document.getElementById("learned-part");
+    const message = document.getElementById("learning-message");
+
+    const answer = input.value.trim();
+
+    if (answer === "") {
+
+        message.innerHTML = "⚠️ Please enter a computer part.";
+
+    } else {
+
+        message.innerHTML =
+            "🌟 Great! You remembered: " + answer + ".";
+
+    }
+
+}
+</script>
+
+</body>
+
+</html>

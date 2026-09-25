@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Computer Skills Hub | Computer Basics</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <header class="navbar">
+
+        <div class="logo">
+            Computer Skills Hub
+        </div>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="learn.html">Learn</a>
+            <a href="practice.html">Practice</a>
+            <a href="quiz.html">Quiz</a>
+            <a href="dashboard.html">Dashboard</a>
+        </nav>
+
+    </header>
+
+    <main class="learning">
+
+        <h2>🖥️ What is a Computer?</h2>
+
+        <p class="section-intro">
+            Let's understand the basic idea of a computer.
+        </p>
+
+        <div class="card">
+
+            <h3>What is a Computer?</h3>
+
+            <p>
+                A computer is an electronic device that accepts data,
+                processes it, stores it, and produces useful information.
+            </p>
+
+            <h3>How Does a Computer Work?</h3>
+
+            <p>
+                A computer generally follows four basic steps:
+            </p>
+
+            <ol>
+                <li><strong>Input:</strong> Data is entered into the computer.</li>
+                <li><strong>Processing:</strong> The computer works on the data.</li>
+                <li><strong>Storage:</strong> Information can be saved for later use.</li>
+                <li><strong>Output:</strong> The computer gives us useful results.</li>
+            </ol>
+
+            <h3>Where Are Computers Used?</h3>
+
+            <p>
+                Computers are used in schools, offices, hospitals, banks,
+                shops, communication, entertainment and many other areas.
+            </p>
+
+        </div>
+
+        <div class="card">
+
+            <h3>💡 Think About It</h3>
+
+            <p>
+                Can you think of three places where you have seen or used
+                a computer?
+            </p>
+
+            <button onclick="showAnswer()">
+                Show Example
+            </button>
+
+            <p id="example-answer" style="display: none;">
+                Examples include schools, banks and offices.
+            </p>
+
+        <div class="card">
+
+    <h3>🎯 Try It Yourself</h3>
+
+    <p>
+        A computer follows a simple process:
+        <strong>Input → Processing → Output</strong>
+    </p>
+
+    <label for="computer-input">
+        Choose something you can enter into a computer:
+    </label>
+
+    <select id="computer-input">
+        <option value="">Select an option</option>
+        <option value="keyboard">Typing with a keyboard</option>
+        <option value="mouse">Clicking with a mouse</option>
+        <option value="monitor">Looking at the monitor</option>
+    </select>
+
+    <button onclick="checkComputerInput()">
+        Check
+    </button>
+
+    <p id="input-result"></p>
+
+</div>
+        
+        </div>
+    
+    <div class="card" style="text-align: center;">
+
+    <a href="learn.html">← Back to Lessons</a>
+
+    &nbsp;&nbsp;&nbsp;&nbsp;
+
+    <a href="computer-parts.html">Next Lesson →</a>
+
+</div>
+
+    </main>
+
+    <footer>
+
+        <p>
+            Computer Skills Hub | Basic Computer Skills for Rural School Students
+        </p>
+
+    </footer>
+
+    <script>
+
+        function showAnswer() {
+
+            document.getElementById("example-answer").style.display = "block";
+
+        }
+        function checkComputerInput() {
+           
+
+    const choice = document.getElementById("computer-input").value;
+    const result = document.getElementById("input-result");
+
+    if (choice === "keyboard" || choice === "mouse") {
+
+        result.textContent =
+            "✅ Correct! Keyboard and mouse are input devices because they are used to enter instructions or data.";
+
+    } else if (choice === "monitor") {
+
+        result.textContent =
+            "❌ Try again. A monitor is an output device because it displays information.";
+
+    } else {
+
+        result.textContent =
+            "Please select an option first.";
+    }
+}
+
+    </script>
+
+</body>
+
+</html>

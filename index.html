@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Computer Skills Hub</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head><!-- Font Awesome for Icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+<body>
+
+    <!-- Navigation Bar -->
+    <header class="navbar">
+
+        <div class="logo">
+            Computer Skills Hub
+        </div>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="learn.html">Learn</a>
+            <a href="practice.html">Practice</a>
+            <a href="quiz.html">Quiz</a>
+            <a href="dashboard.html">Dashboard</a>
+        </nav>
+        
+    </header>
+
+
+    <!-- Hero Section -->
+    <section class="hero">
+
+        <div class="hero-content">
+
+            <p class="small-heading">
+                BASIC COMPUTER SKILLS
+            </p>
+
+            <h1>
+                Your First Step Into the Digital World
+            </h1>
+
+            <p>
+                Learn the basics of computers through simple explanations,
+                interactive activities and fun practice.
+            </p>
+
+            <button onclick="location.href='#learning'">
+                Start Learning
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- Learning Section -->
+    <section class="learning" id="learning">
+
+        <h2>What Can You Learn?</h2>
+
+        <p class="section-intro">
+            Explore the essential computer skills you need to get started.
+        </p>
+
+
+        <div class="learning-cards">
+
+            <div class="card">
+                <h3>Computer Basics</h3>
+                <p>
+                    Understand what a computer is and how it helps us
+                    in everyday life.
+                </p>
+            </div>
+
+
+            <div class="card">
+                <h3>Computer Parts</h3>
+                <p>
+                    Learn about the monitor, CPU, keyboard, mouse and
+                    other important devices.
+                </p>
+            </div>
+
+
+            <div class="card">
+                <h3>Hardware & Software</h3>
+                <p>
+                    Discover the difference between hardware and
+                    software with simple examples.
+                </p>
+            </div>
+
+
+            <div class="card">
+                <h3>Internet Basics</h3>
+                <p>
+                    Learn what the internet is and how it can be
+                    used for education and communication.
+                </p>
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+    <!-- Footer -->
+    <footer>
+
+        <p>
+            Computer Skills Hub | Basic Computer Skills for Rural School Students
+        </p>
+
+    </footer>
+
+    <!-- Login Popup -->
+
+<div id="login-popup" class="login-popup">
+
+    <div class="login-box">
+
+        <h2>🔐 Welcome Back!</h2>
+
+        <p>Please login to continue exploring.</p>
+
+        <label for="popup-username">Username</label>
+
+        <input
+            type="text"
+            id="popup-username"
+            placeholder="Enter your username"
+        >
+
+        <label for="popup-password">Password</label>
+
+        <input
+            type="password"
+            id="popup-password"
+            placeholder="Enter your password"
+        >
+
+        <button onclick="popupLogin()">
+            Login
+        </button>
+
+        <p id="popup-login-message"></p>
+
+    </div>
+
+</div>
+        
+         <script>
+        
+        
+    
+
+        function popupLogin() {
+
+        const username =
+            document.getElementById("popup-username").value.trim();
+
+        const password =
+            document.getElementById("popup-password").value.trim();
+
+        const message =
+            document.getElementById("popup-login-message");
+
+        if (username === "" || password === "") {
+
+            message.textContent =
+                "Please enter your username and password.";
+
+            message.style.color = "red";
+
+            return;
+        }
+
+        message.textContent =
+            "✅ Login successful!";
+            localStorage.setItem("isLoggedIn", "true");
+
+        message.style.color = "green";
+
+        setTimeout(function() {
+
+            document.getElementById("login-popup").style.display = "none";
+
+        }, 800);
+    }
+   
+        if (localStorage.getItem("isLoggedIn") === "true") {
+
+    document.getElementById("login-popup").style.display = "none";
+
+}
+
+</script>
+
+</body>
+</html>

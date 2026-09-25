@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Computer Skills Hub | Input Devices</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <header class="navbar">
+
+        <div class="logo">
+            Computer Skills Hub
+        </div>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="learn.html">Learn</a>
+            <a href="practice.html">Practice</a>
+            <a href="quiz.html">Quiz</a>
+            <a href="dashboard.html">Dashboard</a>
+        </nav>
+
+    </header>
+
+    <main class="learning">
+
+        <h2>⌨️ Input Devices</h2>
+
+        <p class="section-intro">
+            Learn how we give instructions and data to a computer.
+        </p>
+
+        <div class="card">
+
+            <h3>What is an Input Device?</h3>
+
+            <p>
+                An input device is a hardware device used to enter
+                data or instructions into a computer.
+            </p>
+
+            <h3>Common Input Devices</h3>
+
+            <ul>
+                <li><strong>⌨️ Keyboard:</strong> Used for typing letters, numbers and commands.</li>
+                <li><strong>🖱️ Mouse:</strong> Used to point, click, select and move items.</li>
+                <li><strong>🎤 Microphone:</strong> Used to enter sound into a computer.</li>
+                <li><strong>📷 Webcam:</strong> Used to enter images and video.</li>
+            </ul>
+
+        </div>
+
+        <div class="card">
+
+            <h3>🎯 Quick Check</h3>
+
+            <p>
+                Which of these is an input device?
+            </p>
+
+            <button onclick="checkInputAnswer('keyboard')">
+                ⌨️ Keyboard
+            </button>
+
+            <button onclick="checkInputAnswer('monitor')">
+                🖥️ Monitor
+            </button>
+
+            <p id="input-device-result"></p>
+
+        </div>
+
+        <div class="card" style="text-align: center;">
+
+            <a href="computer-basics.html">← Previous Lesson</a>
+
+            &nbsp;&nbsp;&nbsp;&nbsp;
+
+            <a href="computer-parts.html">Next Lesson →</a>
+
+        </div>
+
+    </main>
+
+    <footer>
+
+        <p>
+            Computer Skills Hub | Basic Computer Skills for Rural School Students
+        </p>
+
+    </footer>
+
+    <script>
+
+        function checkInputAnswer(answer) {
+
+            const result =
+                document.getElementById("input-device-result");
+
+            if (answer === "keyboard") {
+
+                result.textContent =
+                    "✅ Correct! A keyboard is an input device.";
+
+            } else {
+
+                result.textContent =
+                    "❌ Try again. A monitor is an output device.";
+
+            }
+        }
+
+    </script>
+
+</body>
+
+</html>
