@@ -1,0 +1,976 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #1e293b;
+    background: #f8fafc;
+}
+
+
+/* =========================
+   LOGIN PAGE
+   ========================= */
+
+.login-container {
+    width: 380px;
+    background: white;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+    text-align: center;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.login-container h1 {
+    font-size: 32px;
+    margin-bottom: 8px;
+}
+
+.login-container > p {
+    color: #64748b;
+    margin-bottom: 30px;
+}
+
+.login-container h2 {
+    margin-bottom: 25px;
+}
+
+form {
+    text-align: left;
+}
+
+label {
+    display: block;
+    margin-bottom: 7px;
+    font-weight: bold;
+}
+
+input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 18px;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    font-size: 15px;
+}
+
+input:focus {
+    outline: none;
+    border-color: #2563eb;
+}
+
+button {
+    border: none;
+    border-radius: 8px;
+    background: #2563eb;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    padding: 13px 22px;
+}
+
+button:hover {
+    background: #1d4ed8;
+}
+
+.login-container button {
+    width: 100%;
+}
+
+.login-container a {
+    color: #2563eb;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+
+/* =========================
+   NAVIGATION BAR
+   ========================= */
+
+.navbar {
+    height: 70px;
+    background: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 7%;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+nav {
+    display: flex;
+    gap: 28px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #334155;
+    font-weight: 600;
+}
+
+nav a:hover {
+    color: #2563eb;
+}
+
+
+/* =========================
+   HERO SECTION
+   ========================= */
+
+.hero {
+    min-height: 500px;
+    display: flex;
+    align-items: center;
+    padding: 70px 10%;
+    background: linear-gradient(135deg, #dbeafe, #f8fafc);
+}
+
+.hero-content {
+    max-width: 650px;
+}
+
+.small-heading {
+    color: #2563eb;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+}
+
+.hero h1 {
+    font-size: 52px;
+    line-height: 1.1;
+    margin-bottom: 22px;
+}
+
+.hero p:not(.small-heading) {
+    font-size: 18px;
+    line-height: 1.7;
+    color: #475569;
+    margin-bottom: 30px;
+}
+
+.hero button {
+    padding: 14px 28px;
+}
+
+
+/* =========================
+   LEARNING SECTION
+   ========================= */
+
+.learning {
+    padding: 70px 8%;
+    text-align: center;
+}
+
+.learning h2 {
+    font-size: 36px;
+    margin-bottom: 12px;
+}
+
+.section-intro {
+    color: #64748b;
+    margin-bottom: 40px;
+}
+
+.learning-cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 22px;
+}
+
+.card {
+    background: white;
+    padding: 28px 20px;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+    transition: transform 0.2s;
+}
+
+.card:hover {
+    transform: translateY(-6px);
+}
+
+.card h3 {
+    margin-bottom: 12px;
+}
+
+.card p {
+    color: #64748b;
+    line-height: 1.6;
+}
+
+
+/* =========================
+   FOOTER
+   ========================= */
+
+footer {
+    text-align: center;
+    padding: 25px;
+    background: #1e293b;
+    color: white;
+}
+
+
+/* =========================
+   MOBILE
+   ========================= */
+
+@media (max-width: 800px) {
+
+    .navbar {
+        padding: 0 4%;
+    }
+
+    nav {
+        gap: 12px;
+    }
+
+    .hero {
+        padding: 60px 6%;
+    }
+
+    .hero h1 {
+        font-size: 40px;
+    }
+
+    .learning-cards {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+
+@media (max-width: 550px) {
+
+    .navbar {
+        flex-direction: column;
+        height: auto;
+        padding: 20px;
+        gap: 15px;
+    }
+
+    .learning-cards {
+        grid-template-columns: 1fr;
+    }
+
+    .login-container {
+        width: 90%;
+    }
+}
+
+/* =========================================
+   DASHBOARD & CARD ENHANCEMENTS
+   ========================================= */
+
+.learning-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 24px;
+    margin-top: 24px;
+}
+
+.card {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 24px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    border: 1px solid #e9ecef;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    border-color: #3498db;
+}
+
+.card h3 {
+    margin-top: 0;
+    color: #2c3e50;
+    font-size: 1.3rem;
+}
+
+.card p {
+    color: #555;
+    line-height: 1.5;
+}
+
+.card a {
+    display: inline-block;
+    margin-top: 12px;
+    color: #3498db;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.2s;
+}
+
+.card a:hover {
+    color: #2980b9;
+    text-decoration: underline;
+}
+
+/* =========================================
+   PROGRESS BAR STYLING
+   ========================================= */
+
+.progress-card {
+    margin-top: 32px;
+    background: #f8f9fa;
+}
+
+.progress-bar {
+    background: #e0e0e0;
+    border-radius: 20px;
+    height: 28px;
+    width: 100%;
+    margin-top: 16px;
+    overflow: hidden;
+    box-shadow: inset 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.progress-fill {
+    background: linear-gradient(90deg, #2ecc71, #27ae60);
+    height: 100%;
+    width: 25%; /* Matches the 25% text in dashboard.html */
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: 12px;
+    color: white;
+    font-weight: bold;
+    font-size: 0.9rem;
+    transition: width 0.6s ease-in-out;
+}
+
+/* =========================================
+   NAVBAR POLISH
+   ========================================= */
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 32px;
+    background: #2c3e50;
+    color: white;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.navbar .logo {
+    font-size: 1.4rem;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+}
+
+.navbar nav {
+    display: flex;
+    gap: 8px;
+}
+
+.navbar nav a {
+    color: #ecf0f1;
+    text-decoration: none;
+    padding: 8px 14px;
+    border-radius: 6px;
+    font-weight: 500;
+    transition: background 0.2s, color 0.2s;
+}
+
+.navbar nav a:hover {
+    background: #34495e;
+    color: #3498db;
+}
+
+.hero {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    text-align: center;
+    padding: 100px 20px;
+    min-height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.small-heading {
+    font-size: 1rem;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    opacity: 0.9;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    font-weight: bold;
+    line-height: 1.2;
+}
+
+.hero p {
+    font-size: 1.3rem;
+    margin-bottom: 40px;
+    line-height: 1.6;
+    opacity: 0.95;
+}
+
+.hero button {
+    background: #f39c12;
+    color: white;
+    border: none;
+    padding: 16px 40px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+.hero button:hover {
+    background: #e67e22;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+}
+
+/* =========================================
+   GENERAL PAGE HEADER
+   ========================================= */
+
+.page-header {
+    text-align: center;
+    padding: 60px 20px 30px;
+    background: #f8fafc;
+}
+
+.page-header h1 {
+    font-size: 42px;
+    margin-bottom: 12px;
+}
+
+.page-header p {
+    color: #64748b;
+    font-size: 17px;
+    max-width: 650px;
+    margin: auto;
+    line-height: 1.6;
+}
+
+
+/* =========================================
+   GENERAL LINKS
+   ========================================= */
+
+.card a {
+    color: #2563eb;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.card a:hover {
+    text-decoration: underline;
+}
+
+
+/* =========================================
+   FORM ELEMENTS
+   ========================================= */
+
+select,
+textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 18px;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    font-size: 15px;
+    font-family: Arial, sans-serif;
+}
+
+textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+select:focus,
+textarea:focus {
+    outline: none;
+    border-color: #2563eb;
+}
+
+
+/* =========================================
+   PRACTICE & QUIZ
+   ========================================= */
+
+.practice-card,
+.quiz-card,
+.feedback-card {
+    max-width: 700px;
+    margin: 40px auto;
+}
+
+.practice-card h2,
+.quiz-card h2,
+.feedback-card h2 {
+    margin-bottom: 20px;
+}
+
+.practice-card button {
+    margin: 6px;
+}
+
+
+/* =========================================
+   DASHBOARD PROGRESS
+   ========================================= */
+
+.progress-card {
+    margin-top: 35px;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 25px;
+    background: #e2e8f0;
+    border-radius: 20px;
+    overflow: hidden;
+    margin-top: 20px;
+}
+
+.progress-fill {
+    width: 25%;
+    height: 100%;
+    background: linear-gradient(90deg, #2563eb, #60a5fa);
+    color: white;
+    text-align: center;
+    line-height: 25px;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+
+/* =========================================
+   BUTTON HOVER
+   ========================================= */
+
+button:hover,
+.btn-primary:hover {
+    transform: translateY(-2px);
+}
+
+
+/* =========================================
+   MOBILE IMPROVEMENTS
+   ========================================= */
+
+@media (max-width: 600px) {
+
+    .page-header h1 {
+        font-size: 32px;
+    }
+
+    .page-header {
+        padding: 40px 15px 20px;
+    }
+
+    .card {
+        padding: 22px 18px;
+    }
+
+}
+
+/* =========================================
+   QUIZ RADIO BUTTONS
+   ========================================= */
+
+.quiz-card input[type="radio"] {
+    width: auto;
+    margin: 0 8px 0 0;
+}
+
+.quiz-card label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 12px;
+    font-weight: normal;
+    cursor: pointer;
+}
+
+/* =========================================
+   QUIZ DESIGN
+   ========================================= */
+
+.quiz-card {
+    background: white;
+    padding: 35px;
+    border-radius: 18px;
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.08);
+}
+
+.quiz-card h3 {
+    margin-bottom: 18px;
+    line-height: 1.5;
+}
+
+.quiz-card label {
+    background: #f8fafc;
+    padding: 12px 15px;
+    border-radius: 10px;
+    border: 1px solid #e2e8f0;
+    transition: 0.2s;
+}
+
+.quiz-card label:hover {
+    background: #eff6ff;
+    border-color: #93c5fd;
+}
+
+.quiz-card input[type="radio"] {
+    flex-shrink: 0;
+}
+
+#quiz-result {
+    margin-top: 25px;
+    padding: 15px;
+    border-radius: 10px;
+    background: #eff6ff;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* Quick Check */
+
+#quick-check {
+    text-align: center;
+}
+
+#quick-check h3 {
+    margin-bottom: 10px;
+}
+
+#answer-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-top: 15px;
+}
+
+#answer-buttons button {
+    padding: 10px 18px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 15px;
+    background-color: #f0f0f0;
+}
+
+#answer-buttons button:hover {
+    transform: translateY(-2px);
+}
+
+#quiz-result {
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+.back-button-container {
+    text-align: center;
+    margin-top: 25px;
+    margin-bottom: 30px;
+}
+
+.back-button {
+    display: inline-block;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+.back-button:hover {
+    transform: translateY(-2px);
+}
+
+.part-card {
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.part-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.learning-activity {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.learning-activity input {
+    padding: 10px;
+    width: 60%;
+    max-width: 350px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    margin: 10px;
+    font-size: 15px;
+}
+
+.learning-activity button {
+    padding: 10px 18px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.learning-activity button:hover {
+    transform: translateY(-2px);
+}
+
+#learning-message {
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+.progress-section {
+    text-align: center;
+    margin: 20px auto;
+    max-width: 600px;
+}
+
+.progress-section p {
+    font-weight: bold;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 12px;
+    background-color: #e5e5e5;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+#progress-fill {
+    width: 0%;
+    height: 100%;
+    transition: width 0.4s ease;
+}
+
+.practice-card {
+    margin-bottom: 25px;
+}
+
+.practice-options {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 15px;
+}
+
+.practice-options button {
+    padding: 10px 16px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 15px;
+    transition: transform 0.2s ease;
+}
+
+.practice-options button:hover {
+    transform: translateY(-2px);
+}
+
+.practice-result {
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+.practice-complete {
+    text-align: center;
+    margin: 30px auto;
+    padding: 25px;
+    border-radius: 12px;
+}
+
+.learning .card {
+    text-align: left;
+}
+
+.learning .card h3 {
+    text-align: left;
+}
+
+.learning .card p,
+.learning .card li {
+    line-height: 1.7;
+}
+
+.learning .card ol {
+    padding-left: 25px;
+}
+
+.login-popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.55);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    z-index: 9999;
+}
+
+.login-box {
+    width: 350px;
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+.login-box h2 {
+    color: #2563eb;
+    margin-bottom: 10px;
+}
+
+.login-box p {
+    color: #666;
+}
+
+.login-box label {
+    display: block;
+    text-align: left;
+    margin-top: 15px;
+    margin-bottom: 6px;
+    font-weight: bold;
+}
+
+.login-box input {
+    width: 100%;
+    padding: 12px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 15px;
+}
+
+.login-box button {
+    width: 100%;
+    margin-top: 20px;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    background: #2563eb;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.login-box button:hover {
+    background: #1d4ed8;
+}
+
+#popup-login-message {
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+/* 📱 Mobile Responsive Design */
+
+@media (max-width: 768px) {
+
+    .navbar {
+        flex-direction: column;
+        padding: 15px;
+    }
+
+    .navbar nav {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+        margin-top: 10px;
+    }
+
+    .navbar nav a {
+        font-size: 14px;
+    }
+
+    .hero {
+        padding: 60px 20px;
+    }
+
+    .hero-content h1 {
+        font-size: 32px;
+    }
+
+    .hero-content p {
+        font-size: 16px;
+    }
+
+    .learning-cards {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .card {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .login-box {
+        width: 90%;
+        box-sizing: border-box;
+    }
+
+    main {
+        padding: 20px 15px;
+    }
+
+    h1 {
+        font-size: 28px;
+    }
+
+    h2 {
+        font-size: 24px;
+    }
+
+    button {
+        max-width: 100%;
+    }
+
+}
